@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(./fondo\ batalla\ naval.jpg);
+  background-image: url(./fondo6.png);
   background-repeat: no-repeat;
   background-color: #cedeea;
   text-align: center;
@@ -29,7 +29,7 @@ body {
 }
 .mycol {
     padding-left: 150px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 #board{
     width: 300px;
@@ -87,7 +87,7 @@ body {
     text-align: center;
     justify-content: center;
 }
-#button {
+.startButton {
   width: auto;
   height: auto;
   padding: 10px;
@@ -108,3 +108,14 @@ body {
   text-align: center;
   margin: 10px;
 }
+@media (max-width: 1200px) {
+.mycol {
+    padding-left: 180px;
+        padding-bottom: 80px;
+    }
+        
+}
+    
+
+
+    

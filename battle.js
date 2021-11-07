@@ -1,7 +1,11 @@
 const board = document.querySelector("#board");
 const boardAttack = document.querySelector("#boardAttack");
 const position = document.querySelectorAll(".position");
-const message = document.querySelector("#messages")
+const message = document.querySelector("#messages");
+const start_button = document.querySelector("#btn-start");
+const start_buttonAgain = document.querySelector("#btn-startAgain");
+const cont_father = document.querySelector("#cont_father");
+
 let matrix = [];
 let matrixAttack = [];
 
@@ -31,6 +35,7 @@ function createMatrix(boardType, matrixType, func, type){
         matrixType.push(list)
     }
 }
+
 //Función para seleccionar barco
 function selectShip(event){
     shipData = event.target.className.split(" ");
@@ -97,12 +102,17 @@ function selectPosition(event){
 
 //Función de botón iniciar juego
 function startGame(){
-     message.innerHTML = "selecciona 5 barcos";
+    message.innerHTML = "selecciona 5 barcos";
     createMatrix(boardAttack, matrixAttack, checkShot, "pc");
     selectPositionRandom()
-    document.querySelector("#button").disabled = true;
+    start_button.disabled = true;
    
 }
+function startGameAgain(){
+    location.reload()      
+    start_button.disabled = false;              
+}
+
 //Generar posición random de barcos
 function selectPositionRandom(){
     for(let i=0; i<quantityShipPC.length; i++){
@@ -156,8 +166,7 @@ function random(i){
 }
 
 //Verificar tiro de jugador
-function checkShot(event){
-    
+function checkShot(event){    
     let grid = event.target
     let gridID = grid.id.split(",");
     let x = parseInt(gridID[0]);
@@ -199,6 +208,7 @@ function shotPc(){
 
 //Revisar ganador
 function checkWinner(matrix, player){
+   
     for(let i=0; i<10; i++){
         let arraychecked = matrix[i].filter((index)=>{return index === "ship"})
         if(arraychecked.length > 0){
@@ -210,11 +220,13 @@ function checkWinner(matrix, player){
         board.innerHTML = "";
         boardAttack.innerHTML = "";
         
+        
     }
     else{
         message.innerHTML = "GANASTE!!!";
          board.innerHTML = "";
         boardAttack.innerHTML = "";
+       
        
     }
 }
