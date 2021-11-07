@@ -216,14 +216,14 @@ function checkWinner(matrix, player){
         }
     }
     if(player === "pc"){
-        message.innerHTML = "Ha ganado el PC";
+        message.innerHTML = "PERDISTE. . . snif";
         board.innerHTML = "";
         boardAttack.innerHTML = "";
         
         
     }
     else{
-        message.innerHTML = "GANASTE!!!";
+        message.innerHTML = "GANASTE!!! ❤️";
          board.innerHTML = "";
         boardAttack.innerHTML = "";
        
