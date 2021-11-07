@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="battle.css" type="text/css" />
+    <title>BattleShip Game</title>
+    </head>
+
+
+
+    <body>
+        <h1 class="font">BattleShip</h1>
+
+         <div class="text-cont"> 
+                <p class="text-child" id="messages">Listo para jugar?</p>
+            </div>
+
+        <!-- <h3>Selecciona la posición de tus naves</h3> -->
+        <div class="container">
+            <div class="row">
+                <div class="mycol">
+                    <div id="board">
+                    </div>
+                </div>
+                <div class="mycol">
+                    <div id="boardAttack">
+                    </div>
+                </div>
+            </div>
+            <h4 class="text">Tus naves:</h4>
+            <div id="ships" class="row">
+                <div class="col"> 
+                    <div>
+                        <span class="text">Portaviones</span></br>
+                        <span class="text">Tamaño: 5</span>
+                    </div>
+                    <div class="position"></div>
+                </div>
+                <div class="col"> 
+                    <div>
+                        <span class="text">Acorazado</span></br>
+                        <span class="text">Tamaño: 4</span>
+                    </div>
+                    <div class="position"></div>
+                </div>
+                <div class="col"> 
+                    <div>
+                        <span class="text">Submarino</span></br>
+                        <span class="text">Tamaño: 3</span>
+                    </div>
+                    <div class="position"></div>
+                </div>
+                <div class="col"> 
+                    <div>
+                        <span class="text">Destructor</span></br>
+                        <span class="text">Tamaño: 2</span>
+                    </div>
+                    <div class="position"></div>
+                </div>           
+            </div>
+            
+            <div class="btn-start-cont">
+
+           
+           
+                <button id="button" onclick="startGame()">START</button>
+
+            
+
+
+
+            </div>
+            
+           
+        </div>
+
+        </div>
+        <script type="text/javascript" src="battle.js"></script>
+    </body>
+</html>

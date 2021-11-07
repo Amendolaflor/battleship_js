@@ -1,0 +1,110 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+body {
+  background-image: url(./fondo\ batalla\ naval.jpg);
+  background-repeat: no-repeat;
+  background-color: #cedeea;
+  text-align: center;
+  background-size: 100% 115%;
+}
+.font{
+    font-family: 'Alfa Slab One', cursive;
+    color: #FFCC29 ;
+    -webkit-text-stroke: 1px black;
+}
+.row {
+    display: flex;
+    /* text-align: center; */
+    padding: 50px;
+
+}
+
+.col {
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+.mycol {
+    padding-left: 150px;
+    padding-bottom: 50px;
+}
+#board{
+    width: 300px;
+    height: 300px;
+}
+.myRow{
+    width: 300px;
+    height: 30px;
+    background-color: #a2d2ff;
+}
+.grid{
+    width: 30px;
+    height: 30px;
+    border: black 0.5px solid;
+    display: inline-block
+}
+.position{
+    display: inline-block;
+}
+.horizontal{
+    width: 35px;
+    height: 15px;
+    border: black 0.5px solid;
+    background-color: #0073ca;
+}
+.vertical{
+    width: 15px;
+    height: 35px;
+    border: black 0.5px solid;
+    margin-top: 5px;
+    background-color: #0073ca;
+}
+.selected{
+    background-color: #125d98;
+}
+.hit{
+    background-color: red;
+}
+.miss{
+    background-color: gray;
+}
+
+.text-cont {
+    display: flex; 
+    justify-content:center;   
+}
+.text {
+    font-size: large;
+    color: white;
+    font-style: inherit;
+}
+.text-child {    
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+}
+#button {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: 1px solid darken black;
+  border-radius: 5px;
+  z-index: 4;
+  outline: 0;
+  box-shadow: none !important;
+  background: linear-gradient(to right, #a2d2ff -35%, #125d98 100%);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  justify-content:  center;
+}
+
+.btn-start-cont {
+  padding-top:20px;
+  text-align: center;
+  margin: 10px;
+}
