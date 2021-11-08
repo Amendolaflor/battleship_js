@@ -108,6 +108,8 @@ function startGame(){
     start_button.disabled = true;
    
 }
+
+//Función de botón iniciar de nuevo
 function startGameAgain(){
     location.reload()      
     start_button.disabled = false;              
@@ -185,7 +187,7 @@ function checkShot(event){
     }
 }
 
-//Jugada del PC
+//Jugada Bot
 function shotPc(){
     let x = Math.floor(Math.random() * Math.floor(10));
     let y = Math.floor(Math.random() * Math.floor(10));
@@ -198,8 +200,7 @@ function shotPc(){
     }
     else if(matrix[x][y] === "hit" || matrix[x][y] === "miss"){
         return shotPc();
-    }
-    else{
+    }else{
         
         matrix[x][y] = "miss";
         document.getElementById(x + "," + y + "," + "player").className += " miss";
@@ -219,10 +220,8 @@ function checkWinner(matrix, player){
         message.innerHTML = "PERDISTE. . . snif";
         board.innerHTML = "";
         boardAttack.innerHTML = "";
-        
-        
-    }
-    else{
+            
+    }else{
         message.innerHTML = "GANASTE!!! ❤️";
          board.innerHTML = "";
         boardAttack.innerHTML = "";
